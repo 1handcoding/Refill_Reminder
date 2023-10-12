@@ -1,0 +1,15 @@
+
+<mat-expansion-panel *ngIf="rx" class="rx-card">
+    <mat-expansion-panel-header class="card-section" id="rx-name">
+        <button mat-button color="primary"><h3 aria-level="3">{{rx.name}}</h3></button>
+    </mat-expansion-panel-header>
+    <ng-template matExpansionPanelContent class="card-section" id="last-fill">
+        <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </ng-template>
+</mat-expansion-panel>
