@@ -8,8 +8,9 @@ import { RxServiceService } from '../rx-service.service';
   styleUrls: ['./rx-card-container.component.css']
 })
 export class RxCardContainerComponent {
-  selectedRx?: RX;
+
   rxs: RX[] = [];
+  selectedRx?: {};
 
   constructor(private rxService: RxServiceService) {}
 
@@ -28,6 +29,4 @@ export class RxCardContainerComponent {
     this.rxs = array;
     return this.rxs;
   }
-
-  /**Need to conjugate types across get methods */
 }

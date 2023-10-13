@@ -1,11 +1,20 @@
 <div class="toolbar" role="banner">
   <mat-toolbar color="primary" id="banner">
-    <h1 aria-level="1">HealthCare.win</h1>
+    <h1 aria-level="1">Refill Reminder</h1>
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" color="accent">
         <mat-icon>menu</mat-icon>
-      </button>
-</mat-toolbar>
+    </button>
+  </mat-toolbar>
 </div>
-<div id="cardContainer">
-  <app-rx-card-container />
+<div role="sorter">
+  <mat-toolbar color="accent">
+    <h2 aria-level=2>Sort By:</h2>
+    <button mat-flat-button color="accent">Name</button>
+    <button mat-raised-button color="primary" (click)="getRxList()">Due Date</button>
+  </mat-toolbar>
+</div>
+<div>
+  <ul>
+    <!--<li *ngFor="let rx of rxs">{{rx.name}}</li>-->
+  </ul>
 </div>
