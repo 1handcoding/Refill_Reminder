@@ -6,15 +6,6 @@
     </button>
   </mat-toolbar>
 </div>
-<div role="sorter">
-  <mat-toolbar color="accent">
-    <h2 aria-level=2>Sort By:</h2>
-    <button mat-flat-button color="accent">Name</button>
-    <button mat-raised-button color="primary" (click)="getRxList()">Due Date</button>
-  </mat-toolbar>
-</div>
-<div>
-  <ul>
-    <!--<li *ngFor="let rx of rxs">{{rx.name}}</li>-->
-  </ul>
+<div id="contentBox">
+  <app-rx-card-container />
 </div>

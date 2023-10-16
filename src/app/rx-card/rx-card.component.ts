@@ -9,5 +9,5 @@ import { Input } from '@angular/core';
 })
 export class RxCardComponent {
 
-  @Input() rx?: RX
+  @Input() rx!: RX
 }

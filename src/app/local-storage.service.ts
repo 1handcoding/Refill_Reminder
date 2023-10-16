@@ -16,6 +16,7 @@ export class LocalStorageService {
 
   getItem(key:string) {
     let item = localStorage.getItem(key);
+    console.log("retrieved " + typeof item)
     return item;
   }
 

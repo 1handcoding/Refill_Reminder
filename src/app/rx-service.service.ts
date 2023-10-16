@@ -14,13 +14,13 @@ export class RxServiceService {
 
   constructor(private localStorage: LocalStorageService) { }
 
-  getRxList() { this.localStorage.getItem('prescriptions' || '{}');
-
+  getRxList() {
     try {
       console.log('parsing...');
-      let rxlist: RX[] = [];
-      rxlist = JSON.parse(this.localStorage.getItem('prescriptions')!);
-      console.log('rxlist: ' + rxlist)
+      console.log('Local store returned ' + typeof this.localStorage.getItem('prescriptions'));
+      const rxstore = this.localStorage.getItem('prescriptions')!
+      const rxlist=  JSON.parse(rxstore) as Array<RX>;
+      console.log('rxlist: ' + typeof rxlist + rxlist)
       return rxlist;
     } catch (e) {
       console.log('JSON.parse error: prescriptions', e);
