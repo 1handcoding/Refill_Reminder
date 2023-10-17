@@ -38,4 +38,12 @@ export class RxCardContainerComponent {
     this.rxOpen = id
     console.log('RX ' + id + ' opened');
   }
+
+  addDays(rx: RX, lastFill: Date, days: number){
+      let fillDate = new Date(lastFill.valueOf());
+      fillDate.setDate(lastFill.getDate() + days);
+      console.log(lastFill + 'plus' + days + ' days =' + fillDate);
+      rx.fillDate = fillDate;
+      return fillDate;
+  }
 }

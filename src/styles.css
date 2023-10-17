@@ -24,9 +24,13 @@ body { margin: 0; font-family: Montserrat, sans-serif; }
     font-weight: 700;
 }
 
-.contentBox {
-    height: max-content;
+#contentBox {
+  height: max-content;
+  width: 95%;
+  border-radius: 10px;
+  margin: 0 auto;
 }
+
 .displayBox {
     max-width: 90%;
     border: 4px solid purple;
@@ -49,10 +53,9 @@ body { margin: 0; font-family: Montserrat, sans-serif; }
 }
 
 .form-line {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     margin: 1em 0;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 button p h1 {
@@ -74,8 +77,10 @@ button p h1 {
     justify-content: space-between;
 }
 .swapper {
-    border: 3px solid purple;
-    border-radius: 5px;
+  height: max-content;
+  width: 95%;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
 ::ng-deep .mat-horizontal-stepper-header-container {
